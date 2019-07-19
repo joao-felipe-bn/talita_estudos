@@ -17,6 +17,11 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService usuarioService;
 	
+	@RequestMapping(method = RequestMethod.GET)
+	public String helloWorld(){
+		return "Olá Mundo!";
+	}
+	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Usuario> find(@PathVariable Integer usuarioId){
 		Usuario usuario = usuarioService.find(usuarioId);
@@ -24,3 +29,4 @@ public class UsuarioController {
 	}	
 	
 }
+	
