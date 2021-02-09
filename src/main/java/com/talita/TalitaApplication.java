@@ -22,7 +22,7 @@ public class TalitaApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		String senhaMd5 = GeradorMD5.converterStringEmMD5("45157neto");
+		String senhaMd5 = GeradorMD5.converterStringEmMD5("senhaParaMd5");
 		
 		Usuario usuario = new Usuario(null, "joao.felipe", senhaMd5);
 		usuarioRepository.save(usuario);
